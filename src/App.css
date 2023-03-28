@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito+Sans&family=Outfit&family=Overpass&family=Poppins&family=Space+Grotesk&display=swap');
-    .container{
+  #root{
+    background-color: rgb(236, 236, 236)
+  }
+.container{
     background-color: #F2F2F2;
     width: 1440px;
     margin: auto;
@@ -8,11 +11,11 @@ header{
     width: 1440px;
     height: 80px;
     background-color: #FFFFFF;
-    
+    margin-bottom: 10px;
 }
 h1{
     margin-left: 81px;
-   margin-right: 860px;
+    margin-right: 860px;
     display: inline-block;
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -32,14 +35,18 @@ p{
     display: inline-block;
 }
 .search{
-    margin-top: 50px;
-    margin-left: 80px;
+     margin-top: 50px;
+    margin-left: 70px;
     width: 480px;
     height: 56px;
     border: none;
     background-color: #FFFFFF;
     display: inline-block;
     border-radius: 5px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+}
+.search:hover{
+    border: 1px solid blue;
 }
 .search img{
     margin-left: 32px;
@@ -58,29 +65,31 @@ input{
     font-size: 14px;
     line-height: 20px;
     color: #848484;
-    
+}
+input::placeholder {
+    font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #848484;
+
 }
 select{
     border: none;
     outline: none;
-    margin-left: 600px;
-    display: inline-block;
     width: 200px;
     height: 56px;
     border-radius: 5px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+}
+select:hover{
+    border: 1px solid blue;
 }
 .countries{
+ 
 }
-.country1{
-    width: 270px ;
-    height: 336px;
-    background-color: #FFFFFF;
-    display: inline-block;
-    margin-left: 80px;
-    margin-top: 50px;
-    border-radius: 5px;
-}
-.country1 h2{
+.det h2{
     margin-left: 24px;
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -90,20 +99,121 @@ select{
     color: #111517;
     display: block;
 }
-.country1 p{
+.det p{
     margin-left: 24px;
     display: block
 }
-.flag{
-    width: 270px;
-    height: 177px;
+  section{
+    background-color: #F2F2F2;
+  }
+button{
+    width: 136px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: #FFFFFF;
+    margin-left: 80px;
+    margin-top: 80px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+}
+button:hover{
+    border: 1px solid blue;
+}
+.button img{
+    margin-left: 32px;
+   
+}
+.button p{
+    margin-bottom: 5px;
+}
+.detail{
+    width: 1440px;
+    height: 1024px;
+}
+.country{
+    display: inline-block;
+    width: 270px ;
+    height: 336px;
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 50px;
     border-radius: 5px;
 }
-.dark{
-    background-color:  #202C36;
-  color: white;
+.flag{
+    width: 270px ;
+    height: 180px;
+    border-radius: 5px;
 }
-
-.dark h1 {
-    color: #f1c40f; 
-  }
+.det{
+    width: 270px ;
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.filters{
+    display: inline-block;
+    width: 1440px;
+}
+.regiondiv{
+    width: 250px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 610px;
+}
+.dark{
+    background-color: #202C36;
+    color: white;
+}
+.dark input,
+.dark select,
+.dark header,
+.dark .search,
+.dark h1,
+.dark .det h2,
+.dark p,
+.dark button,
+.dark input::placeholder,
+.dark .detail1,
+.dark .det {
+  /* background-color: transparent; */
+  background-color: #2B3844;
+  color: inherit;
+}
+.country-details{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.flagDiv{
+    width: 560px;
+    height: 485px;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+.flagphoto{
+    width: 550px;
+    height: 400px;
+}
+.detall{
+ margin-top: 80px;
+ width: 207px;
+ height: 350px;
+}
+.detail1{
+   display: flex;
+   flex-direction: column;
+   font-family: 'Nunito Sans';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 32px;
+   color: #111517;
+   width: 207px;
+   height: 160px;
+}
+.detail2{
+    width: 207px;
+    height: 350px;
+    margin-top: 80px;
+}
