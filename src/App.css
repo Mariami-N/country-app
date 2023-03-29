@@ -73,7 +73,6 @@ font-weight: 400;
 font-size: 14px;
 line-height: 20px;
 color: #848484;
-
 }
 select{
     border: none;
@@ -106,7 +105,7 @@ select:hover{
   section{
     background-color: #F2F2F2;
   }
-button{
+.goback{
     width: 136px;
     height: 40px;
     border-radius: 6px;
@@ -116,14 +115,14 @@ button{
     margin-top: 80px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
 }
-button:hover{
+.goback:hover{
     border: 1px solid blue;
 }
-.button img{
+.goback img{
     margin-left: 32px;
    
 }
-.button p{
+.goback p{
     margin-bottom: 5px;
 }
 .detail{
@@ -172,7 +171,7 @@ button:hover{
 .dark h1,
 .dark .det h2,
 .dark p,
-.dark button,
+.dark .goback,
 .dark input::placeholder,
 .dark .detail1,
 .dark .det {
@@ -189,11 +188,12 @@ button:hover{
     width: 560px;
     height: 485px;
     margin-top: 80px;
-    margin-left: 80px;
+    margin-left: 50px;
 }
 .flagphoto{
     width: 550px;
     height: 400px;
+
 }
 .detall{
  margin-top: 80px;
@@ -216,4 +216,24 @@ button:hover{
     width: 207px;
     height: 350px;
     margin-top: 80px;
+}
+.contryN{
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+}
+.contryN:hover{
+    border: 1px solid blue;
+}
+.contrybutton{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 230px;
+}
+.bordercount{
+    margin-top: 75px;
 }

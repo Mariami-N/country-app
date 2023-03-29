@@ -10,19 +10,21 @@ export default function Countries (){
     const [selectedRegion, setSelectedRegion] = useState('All');
     const [showpage, setShowPage] =useState (false);
     const [country, setCountry] = useState({});
+    const [fetched, setFetched] = useState(false)
 
    useEffect(() => {
   axios.get('https://restcountries.com/v3.1/all')
     .then(response => {
-      console.log(response.data);
+      // console.log(response.data);
+      setFetched(true)
       setCountries(response.data);
     })
-    .catch(error => {
-      console.log(error);
-    });
+    // .catch(error => {
+    //   console.log(error);
+    // });
 }, []);
 
-
+console.log(countries);
 const filteredCountries = countries.filter((country) => {
   return country.name.common.toLowerCase().includes(searchValue.toLowerCase()) &&
   (selectedRegion === 'All' || country.region === selectedRegion);
@@ -43,6 +45,9 @@ return (
              <Details
              country={country}
              onGoBack={() => setShowPage(false)}
+             fetched={fetched}
+             countries={countries}
+             setCountry={setCountry}
            />
             ) : (
   <div className="countries">
