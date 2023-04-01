@@ -18,9 +18,10 @@ function App() {
    className={`container ${darkMode ? 'dark' : '' }`}>
     <header>
       <h1>Where in the world?</h1>
-      <img src={image} alt="moon" onClick={toggleDarkMode } />
-
-      <p> {darkMode ? 'Light Mode' : 'Dark Mode' }</p>
+      <div className='moonlight'>
+        <img src={image} alt="moon" onClick={toggleDarkMode } />
+        <p> {darkMode ? 'Light Mode' : 'Dark Mode' }</p>
+      </div>
     </header>
     <Countries/>
    </div>

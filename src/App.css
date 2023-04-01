@@ -4,14 +4,18 @@
   }
 .container{
     background-color: #F2F2F2;
-    width: 1440px;
-    margin: auto;
+    width: 100vw;
+    margin: 0 auto;
 }
 header{
-    width: 1440px;
+    width: 100vw;
     height: 80px;
     background-color: #FFFFFF;
     margin-bottom: 10px;
+}
+.moonlight{
+    margin-left: 530px;
+    display: inline-block;
 }
 h1{
     margin-left: 81px;
@@ -24,7 +28,7 @@ h1{
     line-height: 33px;
     color: #111517;
 }
-p{
+ p{
     margin-left: 10px;
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -35,8 +39,8 @@ p{
     display: inline-block;
 }
 .search{
-     margin-top: 50px;
-    margin-left: 70px;
+    margin-top: 50px;
+    margin-left: 80px;
     width: 480px;
     height: 56px;
     border: none;
@@ -68,11 +72,11 @@ input{
 }
 input::placeholder {
     font-family: 'Nunito Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #848484;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #848484;
 }
 select{
     border: none;
@@ -134,14 +138,16 @@ select:hover{
     width: 270px ;
     height: 336px;
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 90px;
     margin-top: 50px;
     border-radius: 5px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
 }
 .flag{
     width: 270px ;
     height: 180px;
     border-radius: 5px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
 }
 .det{
     width: 270px ;
@@ -152,37 +158,50 @@ select:hover{
 }
 .filters{
     display: inline-block;
-    width: 1440px;
+    width: 100vw;
 }
 .regiondiv{
     width: 250px;
     height: 70px;
     display: inline-block;
-    margin-left: 610px;
+    margin-left: 1040px;
 }
-.dark{
+.dark
+{
     background-color: #202C36;
     color: white;
 }
-.dark input,
-.dark select,
-.dark header,
-.dark .search,
-.dark h1,
-.dark .det h2,
-.dark p,
-.dark .goback,
-.dark input::placeholder,
-.dark .detail1,
-.dark .det {
-  /* background-color: transparent; */
-  background-color: #2B3844;
-  color: inherit;
+    .dark input,
+    .dark select,
+    .dark header,
+    .dark header p,
+    .dark .search,
+    .dark h1,
+    .dark .flagimg,
+    .dark .country,
+    .dark .det,  
+    .dark .contryN,  
+    .dark .contrybutton button,
+    .dark .det h2,
+    .dark .det p, 
+    .dark .goback,
+    .dark input::placeholder
+{
+    /* background-color: transparent; */
+    background-color: #2B3844;
+    color: inherit;
+}
+.dark .bordercount,
+.dark .detail2 p,
+.dark .detail1 p,
+.dark .detail1
+{
+color:  #FFFFFF;
 }
 .country-details{
+    height: 800px;
     display: flex;
-    justify-content: space-around;
-    align-content: space-around;
+    flex-direction: column;
 }
 .flagDiv{
     width: 560px;
@@ -223,17 +242,39 @@ select:hover{
     height: 40px;
     border: none;
     border-radius: 5px;
+    display: inline-block;
+    margin-left: 20px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
 }
 .contryN:hover{
     border: 1px solid blue;
 }
-.contrybutton{
+.detailbott{
+    margin-top: 50px;
+    margin-left: 500px;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 230px;
+    flex-direction: column;
+    align-items: center;
+    height: 160px;
+    width: 800px;
+   
 }
-.bordercount{
-    margin-top: 75px;
+.one{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 500px;
+    gap: 20px;
+    width: 1500px;
+    margin-left: 200px;
+    /* background-color: green; */
 }
+.two{
+    width: 830px;
+    height: 160px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+

@@ -19,9 +19,9 @@ export default function Countries (){
       setFetched(true)
       setCountries(response.data);
     })
-    // .catch(error => {
-    //   console.log(error);
-    // });
+    .catch(error => {
+      console.log(error);
+    });
 }, []);
 
 console.log(countries);
@@ -42,8 +42,7 @@ const handleClick = (country) => {
 return (
   <>
    {showpage ? (
-             <Details
-             country={country}
+             <Details country={country}
              onGoBack={() => setShowPage(false)}
              fetched={fetched}
              countries={countries}
@@ -71,7 +70,8 @@ return (
   
     <div className='country-list'>
       {filteredCountries.map((country) => (
-        <div className='country' key={country.name.common}>
+        <div className='country' 
+        key={country.name.common}>
           <div className='flagimg'>
             <img className='flag' 
             onClick={() => handleClick(country)}
