@@ -51,15 +51,20 @@ function Details({ country, onGoBack , countries, fetched,setCountry }) {
         </div>
     </div>
       
-     <div className='detail2'>
-        <p>Top Level Domain: {country.tld}</p>
-        <p>Currencies: {Object.values(country.currencies)[0].name}</p>
-        <p>Languages: {Object.values(country.languages)[0]}</p>
-     </div>
+    <div className='detail2'>
+    {country.currencies ? <p>Currencies: {Object.values(country.currencies)[0].name}</p>
+        : <p>No currencies available</p>}
+
+        {country.languages  ? (
+        <p>Languages: {Object.values(country.languages).join(", ")}</p>
+        ) : (
+          <p>No Languages available</p>
+        )}
+       {/* <p>Languages: {Object.values(country.languages)[0]}</p> */}
+     </div>  
 </div>
 <div className='detailbott'>
         <p className=' bordercount'>Border Countries: </p> 
-                  
                   <div className='two'> {bordersCountry.map ((item) => {
                 return (
                       <button  onClick={()=>handleClick(item)} 
@@ -73,17 +78,7 @@ function Details({ country, onGoBack , countries, fetched,setCountry }) {
     </>
   );
 }
-
 export default Details; 
 
-
 // let info = require('./data.json') es tu dagvjirdeba 
-/* <p><span>Languages: </span>
-          {country.languages && country.languages.length > 0 ? (
-           country.languages.map((language, index) => (
-            <span key={country.name}>{Object.values(country.language)[index].name}</span>
-               ))
-            ) : (
-           <span>{" "}</span>
-       )}
-   </p> */
+
